@@ -42,6 +42,7 @@ interface Employee {
   passportIssuedBy: string;
   passportIssueDate: string;
   // Договор
+  contractNumber: string;
   contractSignDate: string;
   contractEffectiveDate: string;
   probationPeriod: string;
@@ -67,6 +68,7 @@ const Employees = () => {
       passportNumber: "123456",
       passportIssuedBy: "ОУФМС по г. Москве",
       passportIssueDate: "2015-05-20",
+      contractNumber: "ТД-001/2023",
       contractSignDate: "2023-01-10",
       contractEffectiveDate: "2023-01-15",
       probationPeriod: "3 месяца",
@@ -88,6 +90,7 @@ const Employees = () => {
       passportNumber: "789012",
       passportIssuedBy: "ОУФМС по г. Москве",
       passportIssueDate: "2018-08-15",
+      contractNumber: "ТД-002/2023",
       contractSignDate: "2023-03-20",
       contractEffectiveDate: "2023-03-22",
       probationPeriod: "2 месяца",
@@ -111,6 +114,7 @@ const Employees = () => {
     passportNumber: "",
     passportIssuedBy: "",
     passportIssueDate: "",
+    contractNumber: "",
     contractSignDate: "",
     contractEffectiveDate: "",
     probationPeriod: "",
@@ -139,6 +143,7 @@ const Employees = () => {
       passportNumber: "",
       passportIssuedBy: "",
       passportIssueDate: "",
+      contractNumber: "",
       contractSignDate: "",
       contractEffectiveDate: "",
       probationPeriod: "",
@@ -179,6 +184,23 @@ const Employees = () => {
                     Персональные данные
                   </h3>
                   <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="contractNumber">
+                        Номер трудового договора *
+                      </Label>
+                      <Input
+                        id="contractNumber"
+                        value={formData.contractNumber}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            contractNumber: e.target.value,
+                          })
+                        }
+                        placeholder="ТД-001/2023"
+                        required
+                      />
+                    </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="lastName">Фамилия *</Label>
@@ -233,6 +255,23 @@ const Employees = () => {
                     Паспортные данные
                   </h3>
                   <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="contractNumber">
+                        Номер трудового договора *
+                      </Label>
+                      <Input
+                        id="contractNumber"
+                        value={formData.contractNumber}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            contractNumber: e.target.value,
+                          })
+                        }
+                        placeholder="ТД-001/2023"
+                        required
+                      />
+                    </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="passportSeries">Серия паспорта *</Label>
@@ -307,6 +346,23 @@ const Employees = () => {
                     Трудовой договор
                   </h3>
                   <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="contractNumber">
+                        Номер трудового договора *
+                      </Label>
+                      <Input
+                        id="contractNumber"
+                        value={formData.contractNumber}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            contractNumber: e.target.value,
+                          })
+                        }
+                        placeholder="ТД-001/2023"
+                        required
+                      />
+                    </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="contractSignDate">
